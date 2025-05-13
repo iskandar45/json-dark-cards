@@ -1,73 +1,37 @@
-# Welcome to your Lovable project
 
-## Project info
+# John Doe - Frontend Developer
 
-**URL**: https://lovable.dev/projects/f825f674-73d1-4b84-85e2-6afed4b366a5
+## About Me
 
-## How can I edit this code?
+Hi there! I'm John Doe, a passionate frontend developer with 5+ years of experience specializing in React, TypeScript, and modern web technologies. I enjoy creating elegant solutions for complex problems and building intuitive user interfaces.
 
-There are several ways of editing your application.
+## Professional Experience
 
-**Use Lovable**
+Currently working as a Senior Frontend Developer at Tech Innovations Inc., where I lead the development of the company's flagship React application. Previously, I worked at Digital Solutions Ltd. as a Frontend Developer, focusing on responsive web applications.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f825f674-73d1-4b84-85e2-6afed4b366a5) and start prompting.
+## Skills
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Languages**: JavaScript (Expert), TypeScript (Expert), HTML/CSS (Expert), Python (Intermediate)
+- **Frameworks**: React, Next.js, Node.js, Express, Tailwind CSS
+- **Databases**: MongoDB, PostgreSQL, Firebase
+- **Tools**: Git, Docker, AWS, Figma
 
-**Use your preferred IDE**
+## Education
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+BSc in Computer Science from University of Technology (2018)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Connect With Me
 
-Follow these steps:
+- Email: john.doe@example.com
+- LinkedIn: [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe)
+- GitHub: [github.com/johndoe](https://github.com/johndoe)
+- Twitter: [twitter.com/johndoe](https://twitter.com/johndoe)
+- Website: [johndoe.dev](https://johndoe.dev)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Current Status
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+✅ Available for hire
+- Open to full-time positions, contract work, and remote opportunities
+- Looking for challenging projects where I can apply my expertise in frontend development
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f825f674-73d1-4b84-85e2-6afed4b366a5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Feel free to reach out if you'd like to collaborate or discuss potential opportunities!
