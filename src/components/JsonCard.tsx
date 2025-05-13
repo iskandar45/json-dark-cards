@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clipboard, Check } from "lucide-react";
+import { Clipboard, Check, WrapText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Switch } from "@/components/ui/switch";
 
 interface JsonCardProps {
   title?: string;
@@ -14,6 +15,7 @@ interface JsonCardProps {
 const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
+  const [wordWrap, setWordWrap] = useState(true);
 
   const formattedJson = JSON.stringify(jsonData, null, 2);
 
@@ -61,6 +63,15 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
         <div className="dot dot-green"></div>
         {title && <span className="ml-2 text-sm font-medium text-foreground/80">{title}</span>}
         <div className="flex-grow"></div>
+        <div className="flex items-center gap-2 mr-2">
+          <WrapText size={14} className="text-muted-foreground" />
+          <Switch 
+            checked={wordWrap} 
+            onCheckedChange={setWordWrap} 
+            size="sm" 
+            aria-label="Toggle word wrap" 
+          />
+        </div>
         <Button 
           variant="ghost" 
           size="icon" 
@@ -72,7 +83,7 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
       </div>
       <CardContent className="p-4 bg-card/60">
         <pre 
-          className="json-content overflow-auto" 
+          className={`json-content overflow-auto ${wordWrap ? 'whitespace-pre-wrap break-words' : 'whitespace-pre'}`} 
           dangerouslySetInnerHTML={{ __html: formatJsonWithHighlighting(formattedJson) }} 
         />
       </CardContent>
