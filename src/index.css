@@ -83,6 +83,18 @@
     @apply text-code-boolean;
   }
 
+  .json-content .line {
+    @apply flex;
+  }
+
+  .json-content .line-number {
+    @apply text-muted-foreground w-8 inline-flex justify-end pr-3 select-none border-r border-border/40 mr-3;
+  }
+
+  .json-content .line-content {
+    @apply flex-1;
+  }
+
   .terminal-header {
     @apply flex items-center gap-1.5 px-4 py-2 bg-muted/60 border-b border-border;
   }

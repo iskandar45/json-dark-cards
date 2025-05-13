@@ -30,29 +30,36 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Format the JSON with syntax highlighting
+  // Format the JSON with syntax highlighting and line numbers
   const formatJsonWithHighlighting = (json: string) => {
-    return json
-      .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
-        let cls = 'number';
-        if (/^"/.test(match)) {
-          if (/:$/.test(match)) {
-            cls = 'property';
-            // Remove the colon from the match for property
-            match = match.substring(0, match.length - 1);
-            return `<span class="${cls}">${match}</span><span class="punctuation">:</span>`;
-          } else {
-            cls = 'string';
+    const lines = json.split('\n');
+    
+    return lines.map((line, index) => {
+      const lineNumber = index + 1;
+      const highlightedLine = line
+        .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+          let cls = 'number';
+          if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+              cls = 'property';
+              // Remove the colon from the match for property
+              match = match.substring(0, match.length - 1);
+              return `<span class="${cls}">${match}</span><span class="punctuation">:</span>`;
+            } else {
+              cls = 'string';
+            }
+          } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+          } else if (/null/.test(match)) {
+            cls = 'keyword';
           }
-        } else if (/true|false/.test(match)) {
-          cls = 'boolean';
-        } else if (/null/.test(match)) {
-          cls = 'keyword';
-        }
-        return `<span class="${cls}">${match}</span>`;
-      })
-      .replace(/[{}\[\]]/g, (match) => `<span class="punctuation">${match}</span>`)
-      .replace(/,/g, '<span class="punctuation">,</span>');
+          return `<span class="${cls}">${match}</span>`;
+        })
+        .replace(/[{}\[\]]/g, (match) => `<span class="punctuation">${match}</span>`)
+        .replace(/,/g, '<span class="punctuation">,</span>');
+      
+      return `<div class="line"><span class="line-number">${lineNumber}</span><span class="line-content">${highlightedLine}</span></div>`;
+    }).join('');
   };
 
   return (
