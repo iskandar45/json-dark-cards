@@ -5,6 +5,7 @@ import HomeSection from "@/components/sections/HomeSection";
 import AboutSection from "@/components/sections/AboutSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import DownloadButton from "@/components/DownloadButton";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Index = () => {
@@ -41,6 +42,8 @@ const Index = () => {
           {renderActiveSection()}
         </motion.main>
       </AnimatePresence>
+      
+      <DownloadButton />
       
       <footer className="py-6 border-t border-border">
         <div className="container text-center text-sm text-muted-foreground">
