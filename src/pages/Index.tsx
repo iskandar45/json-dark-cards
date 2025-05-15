@@ -6,6 +6,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import DownloadButton from "@/components/DownloadButton";
+import ThemeToggle from "@/components/ThemeToggle";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Index = () => {
@@ -46,8 +47,11 @@ const Index = () => {
       <DownloadButton />
       
       <footer className="py-6 border-t border-border">
-        <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Portfolio.json • Built with React & Tailwind
+        <div className="container flex justify-between items-center">
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Portfolio.json • Built with React & Tailwind
+          </div>
+          <ThemeToggle />
         </div>
       </footer>
     </div>
