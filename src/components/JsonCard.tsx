@@ -35,14 +35,9 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
   // Format the JSON with syntax highlighting and line numbers
   const formatJsonWithHighlighting = (json: string) => {
     const lines = json.split('\n');
-    const totalLines = lines.length;
-    // Calculate padding based on the number of digits in the total lines
-    const lineNumberWidth = totalLines.toString().length;
     
     return lines.map((line, index) => {
       const lineNumber = index + 1;
-      // Format line number with consistent width
-      const paddedLineNumber = lineNumber.toString().padStart(lineNumberWidth, ' ');
       
       const highlightedLine = line
         .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
@@ -66,7 +61,7 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
         .replace(/[{}\[\]]/g, (match) => `<span class="punctuation">${match}</span>`)
         .replace(/,/g, '<span class="punctuation">,</span>');
       
-      return `<div class="line"><span class="line-number">${paddedLineNumber}</span><span class="line-content">${highlightedLine}</span></div>`;
+      return `<div class="line"><span class="line-number">${lineNumber}</span><span class="line-content">${highlightedLine}</span></div>`;
     }).join('');
   };
 
