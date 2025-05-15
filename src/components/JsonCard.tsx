@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Clipboard, Check, WrapText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Switch } from "@/components/ui/switch";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface JsonCardProps {
   title?: string;
@@ -16,6 +17,7 @@ const JsonCard = ({ title, jsonData, className = "" }: JsonCardProps) => {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
   const [wordWrap, setWordWrap] = useState(true);
+  const isMobile = useIsMobile();
 
   const formattedJson = JSON.stringify(jsonData, null, 2);
 
