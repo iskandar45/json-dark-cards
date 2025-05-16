@@ -48,10 +48,12 @@ const Index = () => {
       
       <footer className="py-6 border-t border-border">
         <div className="container flex justify-between items-center">
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Portfolio.json • Built with React & Tailwind
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <span className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Portfolio.json • Built with React & Tailwind
+            </span>
           </div>
-          <ThemeToggle />
         </div>
       </footer>
     </div>

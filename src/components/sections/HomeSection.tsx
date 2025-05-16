@@ -2,24 +2,10 @@
 import { motion } from "framer-motion";
 import JsonCard from "../JsonCard";
 import { Badge } from "@/components/ui/badge";
+import portfolioData from "@/data/portfolioData.json";
 
 const HomeSection = () => {
-  const personalInfo = {
-    name: "John Doe",
-    title: "Frontend Developer",
-    description: "Passionate web developer with expertise in React, TypeScript, and modern web technologies",
-    availability: {
-      status: "available",
-      for_hire: true,
-      open_to: ["Full-time", "Contract", "Remote"],
-    },
-    links: {
-      github: "https://github.com/johndoe",
-      linkedin: "https://linkedin.com/in/johndoe",
-      twitter: "https://twitter.com/johndoe",
-      website: "https://johndoe.dev"
-    },
-  };
+  const { basics } = portfolioData;
 
   return (
     <div className="container py-8 space-y-8">
@@ -32,13 +18,13 @@ const HomeSection = () => {
         >
           <div className="flex items-center space-x-3">
             <h1 className="text-3xl md:text-4xl font-bold">
-              {personalInfo.name}
+              {basics.name}
             </h1>
             <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
-              {personalInfo.availability.status}
+              {basics.availability.status}
             </Badge>
           </div>
-          <h2 className="text-xl md:text-2xl text-muted-foreground">{personalInfo.title}</h2>
+          <h2 className="text-xl md:text-2xl text-muted-foreground">{basics.title}</h2>
         </motion.div>
         
         <motion.p 
@@ -47,7 +33,7 @@ const HomeSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg max-w-2xl"
         >
-          {personalInfo.description}
+          {basics.description}
         </motion.p>
       </div>
       
@@ -56,7 +42,7 @@ const HomeSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <JsonCard jsonData={personalInfo} title="profile.json" />
+        <JsonCard jsonData={basics} title="profile.json" />
       </motion.div>
     </div>
   );

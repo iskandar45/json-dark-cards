@@ -1,0 +1,99 @@
+
+{
+  "basics": {
+    "name": "John Doe",
+    "title": "Frontend Developer",
+    "description": "Passionate web developer with expertise in React, TypeScript, and modern web technologies",
+    "availability": {
+      "status": "available",
+      "for_hire": true,
+      "open_to": ["Full-time", "Contract", "Remote"]
+    },
+    "links": {
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "twitter": "https://twitter.com/johndoe",
+      "website": "https://johndoe.dev"
+    }
+  },
+  "about": {
+    "bio": "Full-stack developer with 5+ years of experience specializing in React, TypeScript, and Node.js. Passionate about creating elegant solutions for complex problems.",
+    "experience": [
+      {
+        "company": "Tech Innovations Inc.",
+        "position": "Senior Frontend Developer",
+        "period": "2021 - Present",
+        "responsibilities": [
+          "Lead development of company's flagship React application",
+          "Implemented CI/CD pipelines for frontend projects",
+          "Mentored junior developers and conducted code reviews"
+        ]
+      },
+      {
+        "company": "Digital Solutions Ltd.",
+        "position": "Frontend Developer",
+        "period": "2018 - 2021",
+        "responsibilities": [
+          "Developed responsive web applications using React",
+          "Collaborated with design team to implement UI/UX designs",
+          "Optimized application performance and accessibility"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Technology",
+        "degree": "BSc Computer Science",
+        "year": "2018"
+      }
+    ],
+    "interests": ["Web Development", "Open Source", "UI/UX Design", "Machine Learning", "Gaming"]
+  },
+  "skills": {
+    "languages": [
+      { "name": "JavaScript", "proficiency": "Expert", "years": 5 },
+      { "name": "TypeScript", "proficiency": "Expert", "years": 4 },
+      { "name": "HTML/CSS", "proficiency": "Expert", "years": 6 },
+      { "name": "Python", "proficiency": "Intermediate", "years": 2 },
+      { "name": "Java", "proficiency": "Beginner", "years": 1 }
+    ],
+    "frameworks": [
+      { "name": "React", "proficiency": "Expert", "years": 4 },
+      { "name": "Next.js", "proficiency": "Advanced", "years": 3 },
+      { "name": "Node.js", "proficiency": "Advanced", "years": 3 },
+      { "name": "Express", "proficiency": "Advanced", "years": 3 },
+      { "name": "Tailwind CSS", "proficiency": "Expert", "years": 3 }
+    ],
+    "databases": [
+      { "name": "MongoDB", "proficiency": "Advanced", "years": 3 },
+      { "name": "PostgreSQL", "proficiency": "Intermediate", "years": 2 },
+      { "name": "Firebase", "proficiency": "Advanced", "years": 3 }
+    ],
+    "tools": [
+      { "name": "Git", "proficiency": "Expert", "years": 5 },
+      { "name": "Docker", "proficiency": "Intermediate", "years": 2 },
+      { "name": "AWS", "proficiency": "Intermediate", "years": 2 },
+      { "name": "Figma", "proficiency": "Advanced", "years": 3 }
+    ],
+    "soft_skills": [
+      "Team Leadership",
+      "Problem Solving",
+      "Communication",
+      "Agile Methodology",
+      "Time Management"
+    ]
+  },
+  "contact": {
+    "email": "john.doe@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "availability": "Open for new opportunities",
+    "preferred_contact_method": "email",
+    "social_media": {
+      "linkedin": "linkedin.com/in/johndoe",
+      "github": "github.com/johndoe",
+      "twitter": "twitter.com/johndoe"
+    },
+    "response_time": "Usually within 24 hours"
+  }
+}

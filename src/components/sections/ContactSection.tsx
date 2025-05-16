@@ -2,24 +2,13 @@
 import { motion } from "framer-motion";
 import JsonCard from "../JsonCard";
 import { Button } from "@/components/ui/button";
+import portfolioData from "@/data/portfolioData.json";
 
 const ContactSection = () => {
-  const contactInfo = {
-    email: "john.doe@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    availability: "Open for new opportunities",
-    preferred_contact_method: "email",
-    social_media: {
-      linkedin: "linkedin.com/in/johndoe",
-      github: "github.com/johndoe",
-      twitter: "twitter.com/johndoe"
-    },
-    response_time: "Usually within 24 hours"
-  };
+  const { contact } = portfolioData;
 
   const handleEmailClick = () => {
-    window.location.href = `mailto:${contactInfo.email}`;
+    window.location.href = `mailto:${contact.email}`;
   };
 
   return (
@@ -40,7 +29,7 @@ const ContactSection = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="grid grid-cols-1 lg:grid-cols-2 gap-8"
       >
-        <JsonCard jsonData={contactInfo} title="contact.json" />
+        <JsonCard jsonData={contact} title="contact.json" />
         
         <div className="bg-card p-6 rounded-lg border border-border card-hover-effect">
           <div className="space-y-4">
