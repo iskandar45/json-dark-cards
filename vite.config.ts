@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/portfolio-json/", // Add this line for GitHub Pages deployment
+  base: "/json-dark-cards/", // Updated for GitHub Pages deployment
 }));
