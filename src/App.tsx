@@ -14,13 +14,16 @@ const App = () => {
   // This ensures it's created in the proper React context
   const [queryClient] = useState(() => new QueryClient());
 
+  // Get base URL from Vite's environment variables for GitHub Pages
+  const basename = import.meta.env.BASE_URL;
+
   return (
     <ThemeProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename={basename}>
             <Routes>
               <Route path="/" element={<Index />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
