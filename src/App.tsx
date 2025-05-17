@@ -4,18 +4,23 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./lib/ThemeProvider";
+import "./App.css";
 
 const App = () => {
   // Create a new QueryClient instance within the component function
-  // This ensures it's created in the proper React context
   const [queryClient] = useState(() => new QueryClient());
 
   // Get base URL from Vite's environment variables for GitHub Pages
   const basename = import.meta.env.BASE_URL;
+  
+  useEffect(() => {
+    console.log("App loaded with basename:", basename);
+    console.log("Current pathname:", window.location.pathname);
+  }, [basename]);
 
   return (
     <ThemeProvider>
